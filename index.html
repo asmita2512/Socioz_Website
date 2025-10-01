@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Socioz — Production & Content</title>
+  <style>
+    body {
+      margin: 0;
+      border: 0;
+      font-family: Arial, sans-serif;
+      background: #1b1c25;; /* dark theme */
+      color: #fff;
+      width: 100%;
+    }
+
+    .logo img {
+        height: 30px;   /* adjust size */
+        width: auto;
+        display: block;
+        border-radius: 0px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 25px;
+      border-bottom: 1px solid #222;
+      position:sticky;
+      z-index: 5;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+      @media (max-width: 768px) {
+
+    header{
+              width: 100%;
+    }
+   nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      font-size: 12px;
+      align-content: flex-end;
+    }
+    }
+
+
+    nav a {
+      text-decoration: none;
+      color: #dbdbdb;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color:  #d5b5f7; /* purple → blue */
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 10px;
+      /* background: linear-gradient(202deg,rgba(48, 33, 74, 1) 0%, rgba(2, 2, 18, 1) 59%, rgba(18, 50, 61, 1) 100%); */
+      background-image:  url(bg2.jpg);
+        background-size: cover;
+
+      /* opacity: 50%; */
+      
+      /* url("bg2.png"); */
+      /* background-color:  rgba(0, 0, 0, 0.1);
+      background-blend-mode: lighten; */
+      /* width: 103%; */
+    }
+
+.content {
+			z-index: 4;
+			bottom: 0;
+			text-align: center;
+			/* width: 100%; */
+			padding: 20px;
+            margin-bottom: 100px;
+
+		}
+
+
+    .hero h1 {
+      font-size: 45px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      margin-top: 100px;
+      /* max-width: 800px; */
+    }
+  
+    .hero p {
+      font-size: 18px;
+      color: #aaa;
+      /* max-width: 700px; */
+      margin-bottom: 50px;
+      margin-left: 30px;
+      margin-right: 30px;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+    .hero .cta {
+      background: linear-gradient(135deg, #7e4bb5, #2564d2); /* purple → blue */
+      padding: 12px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .hero .cta:hover {
+      background: linear-gradient(135deg, #bf6ff1, #6e75fa); /* reverse gradient */
+    }
+
+@media (max-width: 768px) {
+
+  .hero{
+    width: 108%;
+    /* width: 100%; */
+  }
+  .hero h1  {
+    font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      max-width: 800px; 
+    
+    }
+    .hero p {
+      font-size: 14px;
+      color: #aaa;
+      max-width: 700px;
+      margin-bottom: 50px;
+      margin-right: 15px;
+      margin-left: 15px;
+      line-height: 1.5;
+    }
+    .hero .cta {
+      background: linear-gradient(135deg, #7e4bb5, #2564d2); 
+      padding: 8px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .content{
+        margin-bottom: 8px;
+    }
+
+}
+
+
+    /*  Our services ---------- */
+
+    .services {
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    }
+    
+    .services h2 {
+      /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+      font-family: 'Archivo Black',sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      margin-top: 50px;
+      background: -webkit-linear-gradient(270deg, #eee 0%, #414041 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      align-items: center;
+      text-align: center;
+    }
+
+    .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-content: center;
+    }
+
+    .service-card {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 3/4; 
+    margin-bottom: 10px;
+    }
+
+    .service-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: opacity 0.4s ease;
+    text-align: left;
+    }
+
+    .service-card:hover .overlay {
+    opacity: 90;
+    }
+
+    .service-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #d0ccfe;
+    }
+    .service-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    .service-card ul li {
+    font-size: 12px;
+    margin: 4px 0;
+    color: #ccc;
+    }
+
+    @media (max-width: 760px) {
+    .services{
+            width: 102%;
+    }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 reels side by side */
+  }
+    }
+
+
+    /* ABOUT US --------- */
+
+
+    .about-section {
+  background: #1b1c25; /* light grey background */
+  padding: 80px 150px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+      font-family: 'Archivo Black',sans-serif;
+      font-weight: 400;
+      font-size: 80px;
+      margin-bottom: 40px;
+      margin-top: 130px;
+      background: -webkit-linear-gradient(270deg, #eee 0%, #414041 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      align-items: center;
+      text-align: center;
+}
+
+.about-section p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #a5a5a5;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 912px) {
+  .about-section {
+    padding: 40px 20px;
+    margin-left: 25px;
+  }
+  .about-section h2 {
+    font-size: 80px;
+    margin-top: 90px;
+  }
+  .about-section p {
+    font-size: 15px;
+  }
+}
+
+
+    /* Our work -------- */
+.our-work {
+  padding: 40px;
+  color: #fff;
+   text-align: center;
+   margin-left: 15px;
+}
+.our-work h1 {
+      /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+      font-family: 'Archivo Black',sans-serif;
+      font-weight: 600;
+      font-size: 100px;
+      margin-top: 80px;
+      background: -webkit-linear-gradient(270deg, #eee 0%, #414041 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      align-items: center;
+      text-align: center;
+
+    }
+.work-category {
+  margin-bottom: 60px;
+}
+
+.work-category h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #e6e6e6;
+}
+
+.work-section h3 {
+  font-size: 24px;
+  margin: 25px 20px;
+  text-align: left;
+  color: #9a9a9a;
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+}
+
+.sound-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+img {
+  width: 20%;
+  height: auto;
+  /* border-radius: 10px; */
+  /* display: block; */
+}
+
+    
+/* Reels grid */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  gap: 15px;
+}
+
+.reels-grid .video-wrapper {
+  aspect-ratio: 9 / 16;  /* force reels to stay vertical */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.reels-grid video {
+  width: 80%;
+  height: auto;
+  object-fit: cover; /* fills nicely without distortion */
+}
+
+/* YouTube videos */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row desktop */
+  gap: 15px;
+}
+
+.videos-grid .video-wrapper {
+  aspect-ratio: 16 / 9; /* wide video format */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.videos-grid video {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Graphics (1:1 square) */
+.graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.graphics-grid img {
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 reels side by side */
+  }
+
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 YT videos */
+  }
+
+  .graphics-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 graphics */
+  }
+}
+
+
+
+/* ------ Last lets collab ---------- */
+
+.collaborate-section {
+  padding: 60px 20px;
+  /* background-color: #111;  */
+  background-image: url(bg3.jpg);
+  background-size: cover;
+  /* fill: cover; */
+  color: #fff;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.collab-content {
+  /* max-width: 600px; */
+  margin: 0 0;
+}
+
+.collab-pre {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.collab-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.collab-btn {
+      background: linear-gradient(135deg, #7e4bb5, #2564d2); /* purple → blue */
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .collab-btn:hover {
+      background: linear-gradient(135deg, #bf6ff1, #6e75fa); /* reverse gradient */
+      transform: translateY(-2px);
+
+    }
+
+
+
+@media (max-width: 480px) {
+    .collaborate-section{
+          width: 103%;
+    }
+    .footer{
+           width: 103%;
+    }
+  .collab-pre {
+    font-size: 28px;
+  }
+  .collab-text {
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .collab-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+
+
+/* Footer.   ---------- */
+
+
+.footer {
+  background: #000000;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+   text-align: center;
+   margin-right: -5px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-info h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-info p,
+.footer-disclaimer p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.footer-info a {
+  color: #a285e7; /* accent color */
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-disclaimer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+
+
+/*   Disclaimer icon  */
+
+.disclaimer {
+  font-size: 10px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center; /* or center if you prefer */
+  /* display: flex; */
+  align-items: center;
+  gap: 6px;
+  margin-top: -25px;
+  margin-bottom: 50px;
+}
+
+.disclaimer i {
+  color: #999; /* subtle icon color */
+  font-size: 10px;
+  text-align: center;
+}
+
+
+/* Bullets */
+
+
+.circle-bullets {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;
+}
+.circle-bullets li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+.circle-bullets li::before {
+  content: "";
+  width: 6px;      /* size of circle */
+  height: 6px;
+  background-color: #918e8e; /* black/gray dot, change to brand color */
+  border-radius: 50%;     /* makes it a circle */
+  position: absolute;
+  left: 0;
+  top: 6px; /* adjust vertically */
+}
+
+
+  </style>
+ <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<script>
+  
+
+//   Our work
+
+    document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const btn = wrapper.querySelector('.sound-btn');
+
+    btn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        btn.textContent = video.muted ? '🔇' : '🔊';
+    });
+    });
+
+</script>
+
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><img src="logo.png" alt="Socioz Logo"></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#our-work">Work</a></li>
+        <li><a href="#collaborate-section">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+
+<!-- <video autoplay muted loop id="myVideo">
+  <source src="showreel.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> -->
+<div class="content">
+    <h1>Stories that speak.</h1>
+    <p>
+    We turn your ideas into compelling content, including videos, photography, and digital experiences that elevate your brand.  
+    </p>
+    <div >
+    <a href="tel:+918446119205" class="cta" style="margin-right: 10px;">Call Us Now</a>
+    <a href="https://wa.me/918446119205" target="_blank"class="cta" style="margin-left: 10px;">Drop a message &nbsp;<i class="fab fa-whatsapp" ></i> </a>
+    <br><br>        
+</div>
+  </section>
+</div>
+
+  <!-- Showreel Section -->
+
+<!-- <section class="showreel">
+  <video id="showreelVideo" src="showreel.mp4" muted autoplay loop playsinline></video>
+</section> -->
+
+
+
+<!-- ------- About us ----------- -->
+
+<section class="about-section" id="about">
+  <div class="about-container">
+    <h2>Who We Are</h2>
+    <p>
+      We’re a creative production and social media content agency. 
+      As storytellers and strategists, 
+      we work to bring your vision to life through thoughtful content and 
+      well-crafted digital experiences.
+    </p>
+    <p>
+      At Socioz, we create commercial shoots, 
+      social media content, and brand stories with care and attention. 
+      We focus on delivering our best in every project, 
+      helping your brand share its story and grow online.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!--  Services ---------- -->
+
+
+<section class="services" id="services">
+  <h2>How We Work</h2>
+  <div class="services-grid">
+
+    <!-- Marketing 360 -->
+    <div class="service-card" style="background-image:url('Service_360.jpg')">
+              <div class="overlay">
+        <h3>360 Marketing</h3>
+        <ul class="circle-bullets">
+          <li>Digital Marketing & Branding</li>
+          <li>Offline Marketing</li>
+          <li>Event Marketing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Digital Marketing -->
+    <div class="service-card" style="background-image:url('Service_digital.jpg')">
+      <div class="overlay">
+        <h3>Digital Marketing</h3>
+        <ul class="circle-bullets">
+          <li>Social Media Marketing</li>
+          <li>Content Marketing</li>
+          <li>Marketing and Consulting</li>
+          <li>SEO</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Influencer Marketing -->
+    <div class="service-card" style="background-image:url('Service_influ.jpg')">
+      <div class="overlay">
+        <h3>Influencer Marketing</h3>
+        <ul class="circle-bullets">
+          <li>Marketing Strategy</li>
+          <li>Marketing Content</li>
+          <li>Marketing Analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Graphic Designing -->
+    <div class="service-card" style="background-image:url('Service_graphic.jpg')">
+      <div class="overlay">
+        <h3>Graphic Designing</h3>
+        <ul class="circle-bullets">
+          <li>Social Media Graphics</li>
+          <li>Print Media Graphics</li>
+          <li>Logo Designing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Video Production -->
+    <div class="service-card" style="background-image:url('Service_video.jpg')">
+      <div class="overlay">
+        <h3>Video Production</h3>
+        <ul class="circle-bullets">
+          <li>Films & photoshoots</li>
+          <li>Product Shoots</li>
+          <li>Drone Shoots</li>
+          <li>Interview Videos</li>
+          <li>Events & Blogs</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Photoshoot -->
+    <div class="service-card" style="background-image:url('Service_photo.jpg')">
+      <div class="overlay">
+        <h3>Photoshoot</h3>
+        <ul class="circle-bullets">
+          <li>Corporate </li>
+          <li>Product </li>
+          <li>Commercial </li>
+          <li>Industrial </li>
+          <li>Headshots & Staff Profiles</li>
+          <li>Social Media Visuals</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="service-card" style="background-image:url('Service_website.jpg')">
+      <div class="overlay">
+        <h3>Web Development</h3>
+        <ul class="circle-bullets">
+          <li>Website Development</li>
+          <li>Support & Maintenance</li>
+          <li>SEO-Friendly Website</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Corporate Branding -->
+    <div class="service-card" style="background-image:url('Service_corporate.jpg')">
+      <div class="overlay">
+        <h3>Corporate Branding</h3>
+        <ul class="circle-bullets">
+          <li>Logo Designing</li>
+          <li>Presentation</li>
+          <li>Brochure Designing</li>
+          <li>Merchandising</li>
+          <li>Packaging</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ------ Our Work -------- -->
+
+<section class="our-work" id="our-work">
+    <h1>What We Do</h1>
+  
+
+  <!-- Shorts & Reels -->
+  <div class="work-category">
+    <h2>Shorts & Reels</h2>
+
+    <!-- Real Estate -->
+    <div class="work-section">
+      <h3>Real Estate </h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="Real_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Real_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Real_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Real_4.mp4" autoplay loop muted></video></div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+
+    <!-- Food Businesses -->
+    <div class="work-section">
+      <h3>Food Businesses</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="Food_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Food_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Food_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Food_4.mp4" autoplay loop muted></video></div>
+      </div>
+       <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+
+    <!-- Salon -->
+    <div class="work-section">
+      <h3>Salon</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="Salon_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Salon_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Salon_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Salon_4.mp4" autoplay loop muted></video></div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+    <!-- Industrial -->
+    <div class="work-section">
+      <h3>Industrial</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="Ind_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Ind_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Ind_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Ind_4.mp4" autoplay loop muted></video></div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+    <!-- School -->
+    <div class="work-section">
+      <h3>Schools</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="School_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="School_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="School_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="School_4.mp4" autoplay loop muted></video></div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+    <!-- Finance & IT -->
+    <div class="work-section">
+      <h3>Finance & IT</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper">
+          <video src="Finance_1.mp4" autoplay loop muted></video>
+        </div>
+        <div class="video-wrapper">
+          <video src="Finance_2.mp4" autoplay loop muted></video>
+        </div>
+        <div class="video-wrapper">
+          <video src="Finance_3.mp4" autoplay loop muted></video>
+        </div>
+        <div class="video-wrapper">
+          <video src="Finance_4.mp4" autoplay loop muted></video>
+        </div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+
+     <!-- Gym -->
+    <div class="work-section">
+      <h3>Sports and Gym</h3>
+      <div class="grid reels-grid">
+        <div class="video-wrapper"><video src="Gym_1.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Gym_2.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Gym_3.mp4" autoplay loop muted></video></div>
+        <div class="video-wrapper"><video src="Gym_4.mp4" autoplay loop muted></video></div>
+      </div>
+      <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+    </div>
+
+
+  <!-- Graphics -->
+  <div class="work-category">
+    <h2>Graphics</h2>
+    <div class="grid graphics-grid">
+      <img src="Grp_1.jpg" alt="Graphic 1">
+      <img src="Grp_2.jpg" alt="Graphic 2">
+      <img src="Grp_3.jpg" alt="Graphic 3">
+      <img src="Grp_4.jpg" alt="Graphic 4">
+      <img src="Grp_5.jpg" alt="Graphic 5">
+      <img src="Grp_6.jpg" alt="Graphic 6">
+    </div>
+        <br><br>
+
+    <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+  </div>
+
+
+   <!-- YouTube Videos -->
+  <div class="work-category">
+    <h2>YouTube Videos</h2>
+    <div class="grid videos-grid">
+        <div class="video-wrapper"><video src="YT_6.mp4" autoplay loop muted></video></div>
+      <div class="video-wrapper"><video src="YT_1.mp4" autoplay loop muted></video></div>
+      <div class="video-wrapper"><video src="YT_2.mp4" autoplay loop muted></video></div>
+      <div class="video-wrapper"><video src="YT_3.mp4" autoplay loop muted></video></div>
+      <div class="video-wrapper"><video src="YT_4.mp4" autoplay loop muted></video></div>
+      <div class="video-wrapper"><video src="YT_5.mp4" autoplay loop muted></video></div>
+    </div>
+    <br><br>
+    <p class="disclaimer">
+        <a href="#footer" class="disclaimer" style="text-decoration: none;">
+        <i class="fas fa-info-circle"></i> &nbsp;For Portfolio use only, all rights with respective owners.
+        </a></p>
+  </div>
+
+
+
+  <br>
+  </div>
+
+</section>
+
+
+
+<!--    Last block --------------- -->
+
+<section class="collaborate-section" id="collaborate-section">
+  <div class="collab-content">
+    <p class="collab-pre">Not limited to video,<br>We're your creative comrades.</p><br>
+    <p class="collab-text">Got questions, project ideas, or just want to say hi?<br> We're all ears!</p><br><br>
+    <a href="https://wa.me/918446119205" target="_blank"class="collab-btn">Let’s Collaborate &nbsp;<i class="fab fa-whatsapp" ></i> </a>
+  </div>
+</section>
+
+
+<!-- Footer ----------- -->
+
+<footer class="footer" id="footer">
+  <div class="footer-container">
+    <centre>
+    <!-- Company Info -->
+    <div class="footer-info">
+      <p class="footer_logo"><img src="logo.png"/></p>
+      <br>
+      <p><i class="fas fa-map-marker-alt"></i>&nbsp;  Pimple Saudagar, Pune</p>
+      <p><a href="mailto:sociozhub@gmail.com">sociozhub@gmail.com</a></p>
+      <p>
+        <i class="fas fa-phone"></i>&nbsp;
+        <a href="tel:+918446119205">+91 8446119205</a> &nbsp; &nbsp; | &nbsp; &nbsp;  
+        <a href="tel:+918766837856">  +91 8766837856</a>
+      </p>
+      <p><i class="fas fa-calendar-alt"></i>&nbsp; Business Hours: Mon - Fri : 9am to 6pm</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="footer-disclaimer">
+      <p >
+        Disclaimer - Projects shown here were produced in collaboration with clients.  
+        Socioz does not claim ownership of brand assets, music, or content featured.  
+        All rights remain with their original owners.  
+        This portfolio is intended for demonstration purposes only.
+      </p>
+    </div>
+    </centre>
+  </div>
+
+  <!-- Bottom note -->
+  <div class="footer-bottom">
+    <p>© 2025 Socioz. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
